@@ -5,23 +5,21 @@ import { useRef, useState, useCallback, useEffect } from "react";
 export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
+  const hasAutoPlayed = useRef(false);
 
   // Auto-play on first user interaction (browsers require a gesture)
   useEffect(() => {
     const play = () => {
+      if (hasAutoPlayed.current) return;
+      hasAutoPlayed.current = true;
       const audio = audioRef.current;
       if (!audio) return;
       audio.play().then(() => setPlaying(true)).catch(() => {});
-      window.removeEventListener("scroll", play);
-      window.removeEventListener("click", play);
-      window.removeEventListener("touchstart", play);
     };
-    window.addEventListener("scroll", play, { once: true, passive: true });
-    window.addEventListener("click", play, { once: true });
-    window.addEventListener("touchstart", play, { once: true, passive: true });
+    window.addEventListener("scroll", play, { passive: true });
+    window.addEventListener("touchstart", play, { passive: true });
     return () => {
       window.removeEventListener("scroll", play);
-      window.removeEventListener("click", play);
       window.removeEventListener("touchstart", play);
     };
   }, []);
@@ -40,7 +38,7 @@ export default function MusicPlayer() {
 
   return (
     <>
-      <audio ref={audioRef} src="/winter.mp3" loop preload="none" />
+      <audio ref={audioRef} src="/winter.mp3" loop preload="auto" />
       <button
         onClick={toggle}
         aria-label={playing ? "Pause music" : "Play music"}
