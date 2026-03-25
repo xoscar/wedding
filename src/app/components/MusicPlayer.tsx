@@ -1,10 +1,30 @@
 "use client";
 
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 
 export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
+
+  // Auto-play on first user interaction (browsers require a gesture)
+  useEffect(() => {
+    const play = () => {
+      const audio = audioRef.current;
+      if (!audio) return;
+      audio.play().then(() => setPlaying(true)).catch(() => {});
+      window.removeEventListener("scroll", play);
+      window.removeEventListener("click", play);
+      window.removeEventListener("touchstart", play);
+    };
+    window.addEventListener("scroll", play, { once: true, passive: true });
+    window.addEventListener("click", play, { once: true });
+    window.addEventListener("touchstart", play, { once: true, passive: true });
+    return () => {
+      window.removeEventListener("scroll", play);
+      window.removeEventListener("click", play);
+      window.removeEventListener("touchstart", play);
+    };
+  }, []);
 
   const toggle = useCallback(() => {
     const audio = audioRef.current;
