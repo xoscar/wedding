@@ -7,20 +7,24 @@ export default function MusicPlayer() {
   const [playing, setPlaying] = useState(false);
   const hasAutoPlayed = useRef(false);
 
-  // Auto-play on first user interaction (browsers require a gesture)
+  // Auto-play on first user interaction (browsers require a user activation event)
   useEffect(() => {
     const play = () => {
       if (hasAutoPlayed.current) return;
       hasAutoPlayed.current = true;
       const audio = audioRef.current;
       if (!audio) return;
-      audio.play().then(() => setPlaying(true)).catch(() => {});
+      audio.play().then(() => setPlaying(true)).catch(() => {
+        hasAutoPlayed.current = false; // reset so next interaction retries
+      });
     };
-    window.addEventListener("scroll", play, { passive: true });
-    window.addEventListener("touchstart", play, { passive: true });
+    // pointerdown and keydown are user activation events in all browsers
+    // (scroll is NOT — audio.play() will be rejected)
+    document.addEventListener("pointerdown", play);
+    document.addEventListener("keydown", play);
     return () => {
-      window.removeEventListener("scroll", play);
-      window.removeEventListener("touchstart", play);
+      document.removeEventListener("pointerdown", play);
+      document.removeEventListener("keydown", play);
     };
   }, []);
 
@@ -28,13 +32,14 @@ export default function MusicPlayer() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    if (playing) {
-      audio.pause();
-    } else {
+    if (audio.paused) {
       audio.play();
+      setPlaying(true);
+    } else {
+      audio.pause();
+      setPlaying(false);
     }
-    setPlaying(!playing);
-  }, [playing]);
+  }, []);
 
   return (
     <>
