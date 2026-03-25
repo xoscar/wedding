@@ -1,9 +1,11 @@
 import Image from "next/image";
 import CurlAnimation from "./components/CurlAnimation";
+import MusicPlayer from "./components/MusicPlayer";
 
 export default function Home() {
   return (
     <div className="w-full bg-amber-50 overflow-x-hidden wedding-wrapper">
+      <MusicPlayer />
       <div className="w-[1440px] h-[6770px] relative bg-amber-50 overflow-hidden mx-auto wedding-container">
         <div className="w-[1440px] h-[1440px] left-0 top-[594px] absolute bg-emerald-950 rounded-full" />
         <div className="w-[1440px] h-[1393px] left-0 top-[1271px] absolute bg-emerald-950" />
