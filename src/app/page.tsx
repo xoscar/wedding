@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CurlAnimation from "./components/CurlAnimation";
 
 export default function Home() {
   return (
@@ -19,13 +20,7 @@ export default function Home() {
           alt="grass"
         />
 
-        <Image
-          className="w-[1440px] h-[5637.81px] left-0 top-[705px] absolute outline outline-[200px] outline-offset-[-100px]"
-          src="/curl.png"
-          width={1440}
-          height={5637}
-          alt="curl"
-        />
+        <CurlAnimation />
 
         <div className="w-[1474px] h-[1474px] left-[-18px] top-[5446px] absolute bg-amber-50 rounded-full" />
         <div className="left-[505px] top-[4957px] absolute text-center justify-start text-amber-50 text-5xl font-bold font-bricolage leading-[76.80px]">

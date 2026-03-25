@@ -33,6 +33,9 @@ const reenieBeanie = Reenie_Beanie({
 export const metadata: Metadata = {
   title: "Oscar & Katy",
   description: "La boda de Oscar y Katy",
+  icons: {
+    icon: "/novios.ico",
+  },
 };
 
 export default function RootLayout({
