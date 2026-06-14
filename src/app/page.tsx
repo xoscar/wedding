@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="w-full bg-amber-50 overflow-x-hidden wedding-wrapper">
       <MusicPlayer />
-      <div className="w-[1440px] h-[7100px] relative bg-amber-50 overflow-hidden mx-auto wedding-container">
+      <div className="w-[1440px] h-[6770px] relative overflow-hidden bg-amber-50 mx-auto wedding-container">
         <div className="w-[1440px] h-[1440px] left-0 top-[594px] absolute bg-emerald-950 rounded-full" />
         <div className="w-[1440px] h-[1393px] left-0 top-[1271px] absolute bg-emerald-950" />
         <div className="w-[778px] h-7 left-[331px] top-[2363px] absolute text-center justify-start text-white text-base font-normal font-preahvihear leading-6">
@@ -16,17 +16,17 @@ export default function Home() {
 
         <CurlAnimation endPageY={4537} />
 
-        <div className="w-[1440px] h-[1412px] left-0 top-[4650px] absolute bg-emerald-950" />
+        <div className="absolute left-0 top-[4650px] bottom-0 w-[1440px] bg-emerald-950" />
 
         <Image
-          className="absolute left-0 top-[4537px] w-[1440px] h-72 outline outline-1 outline-offset-[-0.50px]"
+          className="absolute left-0 top-[4552px] w-[1440px] h-72 outline outline-1 outline-offset-[-0.50px]"
           src="/grass.png"
           width={1440}
           height={72}
           alt="grass"
         />
 
-        <div className="absolute left-1/2 top-[4957px] z-20 w-[832px] -translate-x-1/2 text-center text-amber-50">
+        <div className="absolute left-1/2 top-[4870px] z-30 w-[832px] -translate-x-1/2 text-center text-amber-50">
           <h2 className="font-bricolage text-5xl font-bold leading-[76.80px]">
             Notas Importantes
           </h2>
@@ -42,7 +42,7 @@ export default function Home() {
             <span className="size-12 rounded-full bg-[#8E7AAF]" />
             <span className="size-12 rounded-full bg-[#D0A5F9]" />
           </div>
-          <ul className="mx-auto mt-6 w-fit space-y-2 text-center font-preahvihear text-base leading-6 text-white">
+          <ul className="mx-auto mt-6 w-fit space-y-2 text-left font-preahvihear text-base leading-6 text-white">
             <li>• Este evento es solo para adultos.</li>
             <li>• No habrá mesa de regalos tradicional.</li>
             <li>
@@ -51,7 +51,7 @@ export default function Home() {
             </li>
           </ul>
 
-          <h2 className="mt-14 font-bricolage text-5xl font-bold leading-[76.80px]">
+          <h2 className="mt-10 font-bricolage text-5xl font-bold leading-[76.80px]">
             Hospedaje
           </h2>
           <p className="mt-2 font-preahvihear text-base leading-6 text-white">
@@ -101,33 +101,30 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <p className="mt-5 font-preahvihear text-base leading-6 text-white">
+          <p className="mt-4 font-preahvihear text-base leading-6 text-white">
             Si necesitas ayuda, estamos a un mensaje de distancia.
           </p>
         </div>
 
-        <div className="absolute left-[-18px] top-[5720px] z-10 h-[1474px] w-[1474px] rounded-full bg-amber-50" />
-        <div className="absolute left-[590px] top-[5914px] z-20 text-center font-bricolage text-6xl font-bold text-emerald-950">
-          the
-        </div>
-        <div className="absolute left-[449px] top-[5768px] z-20 h-16 w-[542px] text-center font-bricolage text-6xl font-bold text-emerald-950">
-          Come for the
-        </div>
-        <div className="absolute left-[707px] top-[5891px] z-20 text-center font-reenie text-9xl font-medium text-emerald-950">
-          love.
-        </div>
-        <div className="absolute left-[482px] top-[5810px] z-20 text-center font-reenie text-9xl font-medium text-emerald-950">
-          party,
-        </div>
-        <div className="absolute left-[712px] top-[5833px] z-20 text-center font-bricolage text-6xl font-bold text-emerald-950">
-          stay for{" "}
-        </div>
+        <div className="absolute left-1/2 top-[5830px] z-10 h-[1474px] w-[1474px] -translate-x-1/2 rounded-full bg-amber-50" />
+
+        <div className="absolute bottom-0 left-0 z-[15] h-[400px] w-[1440px] bg-amber-50" />
+
         <Image
-          className="absolute left-[111px] top-[5983px] z-20 h-[1080px] w-[1080px]"
+          className="absolute left-1/2 top-[5970px] z-20 h-[237px] w-[542px] -translate-x-1/2"
+          src="/letras.svg"
+          width={542}
+          height={237}
+          alt="Come for the party, stay for the love."
+        />
+
+        <Image
+          className="absolute left-1/2 top-[6145px] z-20 h-auto w-[1080px] -translate-x-1/2"
           src="/novios.gif"
           width={1080}
           height={1080}
-          alt="novios"
+          alt="Oscar y Katy"
+          unoptimized
         />
         <div className="w-[1332px] h-20 left-[221px] top-[-232px] absolute text-center justify-start text-black text-4xl font-normal font-preahvihear">
           welcome to the
@@ -192,9 +189,6 @@ export default function Home() {
         <div className="w-52 h-14 left-[614px] top-[1578px] absolute text-center justify-start text-amber-50 text-4xl font-normal font-preahvihear leading-[54.40px]">
           Octubre
         </div>
-        <div className="w-96 h-7 left-[523px] top-[3424px] absolute text-center justify-start text-emerald-950 text-base font-normal font-preahvihear leading-6">
-          mismo lugar, a las 00:00 hrs
-        </div>
         <div className="left-[592px] top-[3191px] absolute text-center justify-start text-emerald-950 text-5xl font-bold font-bricolage leading-[76.80px]">
           Ceremonia
         </div>
@@ -256,7 +250,14 @@ export default function Home() {
           alt="star4"
         />
         <div className="w-[927px] h-20 left-[256px] top-[3280px] absolute text-center justify-start text-black text-base font-normal font-preahvihear leading-6">
-          Rompe hielos y ceremonia civil en la terraza del museo, hora 6:30 pm. 
+          La celebración comienza en la terraza del museo, donde nos reuniremos
+          para romper el hielo, ponernos al día y disfrutar de una copa antes
+          del momento oficial.
+          <br /> La ceremonia civil dará inicio a las 6:30 PM, así que te
+          recomendamos llegar con tiempo para no perderte nada.
+          <br /> Después de la ceremonia, aprovecharemos para tomar algunas
+          fotos antes de continuar con la fiesta. Nos hará mucha ilusión
+          compartir este momento contigo. (;
         </div>
       </div>
     </div>

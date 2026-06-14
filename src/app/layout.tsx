@@ -48,7 +48,7 @@ export default function RootLayout({
       lang="en"
       className={`${bricolage.variable} ${poppins.variable} ${preahvihear.variable} ${reenieBeanie.variable}`}
     >
-      <body>{children}</body>
+      <body className="bg-amber-50">{children}</body>
     </html>
   );
 }

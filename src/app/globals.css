@@ -5,24 +5,47 @@ html {
   overscroll-behavior: none;
 }
 
+body {
+  margin: 0;
+  background-color: #fffbeb;
+}
+
 @theme {
   --font-bricolage: var(--font-bricolage-grotesque);
   --font-preahvihear: var(--font-preahvihear);
   --font-poppins: var(--font-poppins);
   --font-reenie: var(--font-reenie-beanie);
   --color-emerald-950: #0A3323;
+  --page-height: 7080px;
+  --page-width: 1440px;
+}
+
+.wedding-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #fffbeb;
 }
 
 @media (max-width: 1440px) {
   .wedding-wrapper {
-    display: flex;
-    justify-content: center;
-    height: calc(7100px * (100vw / 1440px));
+    position: relative;
+    height: calc(var(--page-height) * (100vw / var(--page-width)));
     overflow: hidden;
   }
+
   .wedding-container {
-    flex-shrink: 0;
-    transform: scale(calc(100vw / 1440px));
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: var(--page-width);
+    height: var(--page-height);
+    transform: translateX(-50%) scale(calc(100vw / var(--page-width)));
     transform-origin: top center;
+  }
+}
+
+@media (min-width: 1441px) {
+  .wedding-container {
+    margin-inline: auto;
   }
 }
