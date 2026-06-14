@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ColoredIcon from "./components/ColoredIcon";
 import CurlAnimation from "./components/CurlAnimation";
 import MusicPlayer from "./components/MusicPlayer";
 
@@ -12,17 +13,18 @@ export default function Home() {
         <div className="w-[778px] h-7 left-[331px] top-[2363px] absolute text-center justify-start text-white text-base font-normal font-preahvihear leading-6">
           ver mapa
         </div>
+
+        <CurlAnimation endPageY={4537} />
+
         <div className="w-[1440px] h-[1412px] left-0 top-[4650px] absolute bg-emerald-950" />
 
         <Image
-          className="w-[1440px] h-72 left-0 top-[4537px] absolute outline outline-1 outline-offset-[-0.50px]"
+          className="absolute left-0 top-[4537px] w-[1440px] h-72 outline outline-1 outline-offset-[-0.50px]"
           src="/grass.png"
           width={1440}
           height={72}
           alt="grass"
         />
-
-        <CurlAnimation />
 
         <div className="w-[1474px] h-[1474px] left-[-18px] top-[5446px] absolute bg-amber-50 rounded-full" />
         <div className="left-[505px] top-[4957px] absolute text-center justify-start text-amber-50 text-5xl font-bold font-bricolage leading-[76.80px]">
@@ -53,10 +55,10 @@ export default function Home() {
           stay for{" "}
         </div>
         <Image
-          className="w-[1289.33px] h-[967px] left-[111px] top-[5803px] absolute"
-          src="/novios.png"
-          width={1289}
-          height={967}
+          className="w-[1080px] h-[1080px] left-[111px] top-[5803px] absolute"
+          src="/novios.gif"
+          width={1080}
+          height={1080}
           alt="novios"
         />
         <div className="w-[1332px] h-20 left-[221px] top-[-232px] absolute text-center justify-start text-black text-4xl font-normal font-preahvihear">
@@ -139,44 +141,33 @@ export default function Home() {
         <div className="left-[592px] top-[3191px] absolute text-center justify-start text-emerald-950 text-5xl font-bold font-bricolage leading-[76.80px]">
           Ceremonia
         </div>
-        <Image
-          className="w-[523.33px] h-[594.34px] left-[440px] top-[3627px] absolute outline outline-[24px] outline-offset-[-12px]"
-          src="/cover.png"
-          width={508}
-          height={594}
-          alt="cover"
-        />
-
-        <Image
-          className="w-28 h-28 left-[911px] top-[3586.17px] absolute"
-          src="/heart.png"
-          width={114}
-          height={106}
-          alt="heart"
-        />
-        <Image
-          className="w-16 h-12 left-[815px] top-[3586.17px] absolute"
-          src="/heart2.png"
-          width={60}
-          height={51}
-          alt="heart2"
-        />
-
-        <Image
-          className="w-[75px] h-[73px] left-[500px] top-[4090px] absolute origin-top-left rotate-[25deg]"
-          src="/heart3.png"
-          width={75}
-          height={73}
-          alt="heart3"
-        />
-
-        <Image
-          className="w-[77px] h-[118px] left-[417px] top-[4163px] absolute origin-top-left"
-          src="/heart3.png"
-          width={77}
-          height={118}
-          alt="heart3"
-        />
+        <div className="left-1/2 top-[3510px] absolute z-10 w-[1000px] -translate-x-1/2 drop-shadow-[0_16px_40px_rgba(10,51,35,0.15)]">
+          <div className="relative w-full">
+            <Image
+              className="h-auto w-full mix-blend-screen"
+              src="/fotos.png"
+              width={1000}
+              height={1000}
+              alt="Fotos de Oscar y Katy"
+            />
+            <ColoredIcon
+              src="/heart.png"
+              className="right-[70px] top-[110px] z-20 h-28 w-28"
+            />
+            <ColoredIcon
+              src="/heart2.png"
+              className="right-[70px] top-[250px] z-20 h-12 w-16"
+            />
+            <ColoredIcon
+              src="/heart3.png"
+              className="bottom-[290px] left-[70px] z-20 h-[73px] w-[75px] origin-top-left rotate-[25deg]"
+            />
+            <ColoredIcon
+              src="/heart3.png"
+              className="bottom-[95px] left-[70px] z-20 h-[118px] w-[77px] origin-top-left"
+            />
+          </div>
+        </div>
 
         <div className="w-16 h-16 left-[190px] top-[2431px] absolute" />
         <Image

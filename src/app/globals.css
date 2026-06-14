@@ -13,12 +13,15 @@ html {
 }
 
 @media (max-width: 1440px) {
-  .wedding-container {
-    transform: scale(calc(100vw / 1440px));
-    transform-origin: top left;
-  }
   .wedding-wrapper {
+    display: flex;
+    justify-content: center;
     height: calc(6770px * (100vw / 1440px));
     overflow: hidden;
+  }
+  .wedding-container {
+    flex-shrink: 0;
+    transform: scale(calc(100vw / 1440px));
+    transform-origin: top center;
   }
 }

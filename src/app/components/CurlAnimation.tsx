@@ -3,30 +3,73 @@
 import { useRef, useEffect } from "react";
 import { useScroll, useTransform, useMotionValueEvent } from "motion/react";
 
-export default function CurlAnimation() {
+const SVG_TOP = 705;
+const SVG_HEIGHT = 5637.81;
+const VIEWBOX_HEIGHT = 5838;
+const PAGE_HEIGHT = 6770;
+
+type CurlAnimationProps = {
+  /** Page Y where the curl should finish (top of grass / green section). */
+  endPageY?: number;
+};
+
+function pageYToViewBoxY(pageY: number) {
+  return ((pageY - SVG_TOP) / SVG_HEIGHT) * VIEWBOX_HEIGHT;
+}
+
+function findLengthAtY(path: SVGPathElement, targetY: number) {
+  const total = path.getTotalLength();
+  const start = total * 0.55;
+  let best = start;
+  let bestDist = Infinity;
+
+  for (let i = 0; i <= 300; i++) {
+    const len = start + (i / 300) * (total - start);
+    const dist = Math.abs(path.getPointAtLength(len).y - targetY);
+    if (dist < bestDist) {
+      bestDist = dist;
+      best = len;
+    }
+  }
+
+  return best;
+}
+
+export default function CurlAnimation({ endPageY = 4537 }: CurlAnimationProps) {
   const pathRef = useRef<SVGPathElement>(null);
   const lengthRef = useRef(0);
+  const stopLengthRef = useRef(0);
 
+  const finishProgress = endPageY / PAGE_HEIGHT;
   const { scrollYProgress } = useScroll();
-  const dashOffset = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const progress = useTransform(
+    scrollYProgress,
+    [0, finishProgress],
+    [0, 1],
+    { clamp: true },
+  );
 
   useEffect(() => {
-    if (pathRef.current) {
-      lengthRef.current = pathRef.current.getTotalLength();
-      pathRef.current.style.strokeDasharray = `${lengthRef.current}`;
-      pathRef.current.style.strokeDashoffset = `${lengthRef.current}`;
-    }
-  }, []);
+    const path = pathRef.current;
+    if (!path) return;
 
-  useMotionValueEvent(dashOffset, "change", (v) => {
-    if (pathRef.current && lengthRef.current) {
-      pathRef.current.style.strokeDashoffset = `${lengthRef.current * v}`;
-    }
-  });
+    const total = path.getTotalLength();
+    lengthRef.current = total;
+    stopLengthRef.current = findLengthAtY(path, pageYToViewBoxY(endPageY));
+
+    const updateOffset = (t: number) => {
+      const stop = stopLengthRef.current;
+      path.style.strokeDasharray = `${total}`;
+      path.style.strokeDashoffset = `${total - stop * t}`;
+    };
+
+    updateOffset(progress.get());
+    return progress.on("change", updateOffset);
+  }, [endPageY, progress]);
 
   return (
     <svg
-      className="w-[1440px] h-[5637.81px] left-0 top-[705px] absolute"
+      className="absolute left-0 top-[705px] w-[1440px] h-[5637.81px]"
       viewBox="0 0 1440 5838"
       fill="none"
       preserveAspectRatio="none"
