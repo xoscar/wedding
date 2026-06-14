@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="w-full bg-amber-50 overflow-x-hidden wedding-wrapper">
       <MusicPlayer />
-      <div className="w-[1440px] h-[6770px] relative bg-amber-50 overflow-hidden mx-auto wedding-container">
+      <div className="w-[1440px] h-[7100px] relative bg-amber-50 overflow-hidden mx-auto wedding-container">
         <div className="w-[1440px] h-[1440px] left-0 top-[594px] absolute bg-emerald-950 rounded-full" />
         <div className="w-[1440px] h-[1393px] left-0 top-[1271px] absolute bg-emerald-950" />
         <div className="w-[778px] h-7 left-[331px] top-[2363px] absolute text-center justify-start text-white text-base font-normal font-preahvihear leading-6">
@@ -26,36 +26,104 @@ export default function Home() {
           alt="grass"
         />
 
-        <div className="w-[1474px] h-[1474px] left-[-18px] top-[5446px] absolute bg-amber-50 rounded-full" />
-        <div className="left-[505px] top-[4957px] absolute text-center justify-start text-amber-50 text-5xl font-bold font-bricolage leading-[76.80px]">
-          Notas Importantes
+        <div className="absolute left-1/2 top-[4957px] z-20 w-[832px] -translate-x-1/2 text-center text-amber-50">
+          <h2 className="font-bricolage text-5xl font-bold leading-[76.80px]">
+            Notas Importantes
+          </h2>
+          <p className="mx-auto mt-2 max-w-[640px] font-preahvihear text-base leading-6 text-white">
+            • Queremos verte elegante, pero siendo tú. Nuestras sugerencias:
+          </p>
+          <div
+            className="mt-3 flex items-center justify-center gap-3"
+            aria-label="Paleta de colores sugerida"
+          >
+            <span className="size-12 rounded-full bg-[#839958]" />
+            <span className="size-12 rounded-full bg-[#5C7350]" />
+            <span className="size-12 rounded-full bg-[#8E7AAF]" />
+            <span className="size-12 rounded-full bg-[#D0A5F9]" />
+          </div>
+          <ul className="mx-auto mt-6 w-fit space-y-2 text-center font-preahvihear text-base leading-6 text-white">
+            <li>• Este evento es solo para adultos.</li>
+            <li>• No habrá mesa de regalos tradicional.</li>
+            <li>
+              • Estacionamiento dentro del lugar para las personas que lleguen
+              temprano :P
+            </li>
+          </ul>
+
+          <h2 className="mt-14 font-bricolage text-5xl font-bold leading-[76.80px]">
+            Hospedaje
+          </h2>
+          <p className="mt-2 font-preahvihear text-base leading-6 text-white">
+            Para quienes vienen de fuera, aquí algunas opciones:
+          </p>
+          <div className="mt-5 space-y-5">
+            <div>
+              <p className="font-preahvihear text-base leading-6 text-white">
+                Cerca de los novios:
+              </p>
+              <div className="mt-1 space-y-1 font-preahvihear text-base leading-6">
+                <a
+                  href="https://www.airbnb.mx/s/Torre%C3%B3n--Coah./homes?refinement_paths%5B%5D=%2Fhomes&place_id=ChIJkbkDRnDyj4YRsk8eT6FIe2Q&acp_id=d2c481c6-9907-4be8-ac5b-e73afc3c3a5e&date_picker_type=calendar&checkin=2026-10-03&checkout=2026-10-04&adults=2&search_type=user_map_move&query=Torre%C3%B3n%2C%20Coah.&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2026-07-01&monthly_length=3&monthly_end_date=2026-10-01&search_mode=regular_search&price_filter_input_type=2&price_filter_num_nights=1&channel=EXPLORE&ne_lat=25.593240777833035&ne_lng=-103.39706388809606&sw_lat=25.57764309416155&sw_lng=-103.42089384925674&zoom=15.172032991647134&zoom_level=15.172032991647134&search_by_map=true"
+                  className="block text-[#D0A5F9] hover:underline"
+                  target="_blank"
+                >
+                  Airbnb
+                </a>
+                <a
+                  href="https://www.google.com/maps/place/Fiesta+Inn+Torre%C3%B3n+Galer%C3%ADas/@25.5818328,-103.4066078,755m/data=!3m2!1e3!5s0x868fdaf5a1c94caf:0x73e875c31ca699ec!4m9!3m8!1s0x868fdb858de1400b:0x39002fd97887b110!5m2!4m1!1i2!8m2!3d25.5818328!4d-103.4040329!16s%2Fg%2F1tjmf2jz?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
+                  className="block text-[#D0A5F9] hover:underline"
+                  target="_blank"
+                >
+                  Hotel
+                </a>
+              </div>
+            </div>
+            <div>
+              <p className="font-preahvihear text-base leading-6 text-white">
+                Cerca del lugar:
+              </p>
+              <div className="mt-1 space-y-1 font-preahvihear text-base leading-6">
+                <a
+                  href="https://www.airbnb.mx/s/Museo-Arocena--Torre%C3%B3n--Coah./homes?refinement_paths%5B%5D=%2Fhomes&place_id=ChIJ31sDFmbZj4YR-Gi8_br1qbQ&acp_id=2584c4a4-98bc-4643-8d77-70527cd62042&date_picker_type=calendar&checkin=2026-07-03&checkout=2026-07-05&adults=2&search_type=user_map_move&query=Museo%20Arocena%2C%20Torre%C3%B3n%2C%20Coah.&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2026-07-01&monthly_length=3&monthly_end_date=2026-10-01&search_mode=regular_search&price_filter_input_type=2&price_filter_num_nights=2&channel=EXPLORE&ne_lat=25.545894825474715&ne_lng=-103.44420876329337&sw_lat=25.533599552835383&sw_lng=-103.4629861745729&zoom=15.515811410146176&zoom_level=15.515811410146176&search_by_map=true"
+                  className="block text-[#D0A5F9] hover:underline"
+                  target="_blank"
+                >
+                  Airbnb
+                </a>
+                <a
+                  href="https://www.google.com/maps/place/Moka+Boutique+Hotel/@25.5423482,-103.4574853,1511m/data=!3m1!1e3!4m22!1m9!2m8!1shoteles+torreon+centro!5m5!5m4!1s2026-10-02!2i2!4m1!1i2!6e3!3m11!1s0x868fdb4b7506af9d:0xa8bbb0df09afa3b5!5m4!1s2026-10-02!2i2!4m1!1i2!8m2!3d25.5423482!4d-103.4489291!15sChZob3RlbGVzIHRvcnJlb24gY2VudHJvkgEFaG90ZWyqAUwQASoLIgdob3RlbGVzKA4yHxABIhvwRwZshxO4CxUQuUeRR71KRKgPl9AuVsBzgzMyGhACIhZob3RlbGVzIHRvcnJlb24gY2VudHJv4AEA!16s%2Fg%2F11g07snbvd?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
+                  className="block text-[#D0A5F9] hover:underline"
+                  target="_blank"
+                >
+                  Hotel
+                </a>
+              </div>
+            </div>
+          </div>
+          <p className="mt-5 font-preahvihear text-base leading-6 text-white">
+            Si necesitas ayuda, estamos a un mensaje de distancia.
+          </p>
         </div>
-        <div className="left-[601px] top-[5146px] absolute text-center justify-start text-amber-50 text-5xl font-bold font-bricolage leading-[76.80px]">
-          Hospedaje
-        </div>
-        <div className="w-[832px] h-28 left-[310px] top-[5239px] absolute text-center justify-start text-white text-base font-normal font-preahvihear leading-6">
-          Para quienes vienen de fuera, aquí algunas opciones:
-          <br />
-          Cerca de los novios: Cerca del lugar: Si necesitas ayuda, estamos a un
-          mensaje de distancia.
-        </div>
-        <div className="left-[590px] top-[5734px] absolute text-center justify-start text-emerald-950 text-6xl font-bold font-bricolage">
+
+        <div className="absolute left-[-18px] top-[5720px] z-10 h-[1474px] w-[1474px] rounded-full bg-amber-50" />
+        <div className="absolute left-[590px] top-[5914px] z-20 text-center font-bricolage text-6xl font-bold text-emerald-950">
           the
         </div>
-        <div className="w-[542px] h-16 left-[449px] top-[5588px] absolute text-center justify-start text-emerald-950 text-6xl font-bold font-bricolage">
+        <div className="absolute left-[449px] top-[5768px] z-20 h-16 w-[542px] text-center font-bricolage text-6xl font-bold text-emerald-950">
           Come for the
         </div>
-        <div className="left-[707px] top-[5711px] absolute text-center justify-start text-emerald-950 text-9xl font-medium font-reenie">
+        <div className="absolute left-[707px] top-[5891px] z-20 text-center font-reenie text-9xl font-medium text-emerald-950">
           love.
         </div>
-        <div className="left-[482px] top-[5630px] absolute text-center justify-start text-emerald-950 text-9xl font-medium font-reenie">
+        <div className="absolute left-[482px] top-[5810px] z-20 text-center font-reenie text-9xl font-medium text-emerald-950">
           party,
         </div>
-        <div className="left-[712px] top-[5653px] absolute text-center justify-start text-emerald-950 text-6xl font-bold font-bricolage">
+        <div className="absolute left-[712px] top-[5833px] z-20 text-center font-bricolage text-6xl font-bold text-emerald-950">
           stay for{" "}
         </div>
         <Image
-          className="w-[1080px] h-[1080px] left-[154px] top-[5803px] absolute"
+          className="absolute left-[111px] top-[5983px] z-20 h-[1080px] w-[1080px]"
           src="/novios.gif"
           width={1080}
           height={1080}
@@ -123,17 +191,6 @@ export default function Home() {
         </div>
         <div className="w-52 h-14 left-[614px] top-[1578px] absolute text-center justify-start text-amber-50 text-4xl font-normal font-preahvihear leading-[54.40px]">
           Octubre
-        </div>
-        <div className="w-[1006px] h-28 left-[208px] top-[4756px] absolute text-center justify-start text-amber-50 text-base font-normal font-preahvihear leading-6">
-          Queremos verte elegante, pero siendo tú. (El blanco ya está ocupado :p
-          )
-          <br />
-          Este evento es solo para adultos.
-          <br />
-          No habrá mesa de regalos tradicional.
-          <br />
-          Estacionamiento dentro del lugar para las personas que lleguen
-          temprano :P
         </div>
         <div className="w-96 h-7 left-[523px] top-[3424px] absolute text-center justify-start text-emerald-950 text-base font-normal font-preahvihear leading-6">
           mismo lugar, a las 00:00 hrs
