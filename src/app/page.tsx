@@ -10,7 +10,7 @@ export default function Home() {
       <div className="w-[1440px] h-[6770px] relative overflow-hidden bg-amber-50 mx-auto wedding-container">
         <div className="w-[1440px] h-[1440px] left-0 top-[594px] absolute bg-emerald-950 rounded-full" />
         <div className="w-[1440px] h-[1393px] left-0 top-[1271px] absolute bg-emerald-950" />
-        <div className="w-[778px] h-7 left-[331px] top-[2363px] absolute text-center justify-start text-white text-base font-normal font-preahvihear leading-6">
+        <div className="w-[778px] h-7 left-[331px] top-[2363px] absolute text-center justify-start text-white text-base font-normal font-preahvihear leading-[1.944rem]">
           ver mapa
         </div>
 
@@ -27,10 +27,10 @@ export default function Home() {
         />
 
         <div className="absolute left-1/2 top-[4870px] z-30 w-[832px] -translate-x-1/2 text-center text-amber-50">
-          <h2 className="font-bricolage text-5xl font-bold leading-[76.80px]">
+          <h2 className="font-bricolage text-5xl font-bold leading-[99.53px]">
             Notas Importantes
           </h2>
-          <p className="mx-auto mt-2 max-w-[640px] font-preahvihear text-base leading-6 text-white">
+          <p className="mx-auto mt-2 max-w-[640px] font-preahvihear text-base leading-[1.944rem] text-white">
             • Queremos verte elegante, pero siendo tú. Nuestras sugerencias:
           </p>
           <div
@@ -42,7 +42,7 @@ export default function Home() {
             <span className="size-12 rounded-full bg-[#8E7AAF]" />
             <span className="size-12 rounded-full bg-[#D0A5F9]" />
           </div>
-          <ul className="mx-auto mt-6 w-fit space-y-2 text-left font-preahvihear text-base leading-6 text-white">
+          <ul className="mx-auto mt-6 w-fit space-y-2 text-center font-preahvihear text-base leading-[1.944rem] text-white">
             <li>• Este evento es solo para adultos.</li>
             <li>• No habrá mesa de regalos tradicional.</li>
             <li>
@@ -51,18 +51,18 @@ export default function Home() {
             </li>
           </ul>
 
-          <h2 className="mt-10 font-bricolage text-5xl font-bold leading-[76.80px]">
+          <h2 className="mt-10 font-bricolage text-5xl font-bold leading-[99.53px]">
             Hospedaje
           </h2>
-          <p className="mt-2 font-preahvihear text-base leading-6 text-white">
+          <p className="mt-2 font-preahvihear text-base leading-[1.944rem] text-white">
             Para quienes vienen de fuera, aquí algunas opciones:
           </p>
           <div className="mt-5 space-y-5">
             <div>
-              <p className="font-preahvihear text-base leading-6 text-white">
+              <p className="font-preahvihear text-base leading-[1.944rem] text-white">
                 Cerca de los novios:
               </p>
-              <div className="mt-1 space-y-1 font-preahvihear text-base leading-6">
+              <div className="mt-1 space-y-1 font-preahvihear text-base leading-[1.944rem]">
                 <a
                   href="https://www.airbnb.mx/s/Torre%C3%B3n--Coah./homes?refinement_paths%5B%5D=%2Fhomes&place_id=ChIJkbkDRnDyj4YRsk8eT6FIe2Q&acp_id=d2c481c6-9907-4be8-ac5b-e73afc3c3a5e&date_picker_type=calendar&checkin=2026-10-03&checkout=2026-10-04&adults=2&search_type=user_map_move&query=Torre%C3%B3n%2C%20Coah.&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2026-07-01&monthly_length=3&monthly_end_date=2026-10-01&search_mode=regular_search&price_filter_input_type=2&price_filter_num_nights=1&channel=EXPLORE&ne_lat=25.593240777833035&ne_lng=-103.39706388809606&sw_lat=25.57764309416155&sw_lng=-103.42089384925674&zoom=15.172032991647134&zoom_level=15.172032991647134&search_by_map=true"
                   className="block text-[#D0A5F9] hover:underline"
@@ -80,10 +80,10 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <p className="font-preahvihear text-base leading-6 text-white">
+              <p className="font-preahvihear text-base leading-[1.944rem] text-white">
                 Cerca del lugar:
               </p>
-              <div className="mt-1 space-y-1 font-preahvihear text-base leading-6">
+              <div className="mt-1 space-y-1 font-preahvihear text-base leading-[1.944rem]">
                 <a
                   href="https://www.airbnb.mx/s/Museo-Arocena--Torre%C3%B3n--Coah./homes?refinement_paths%5B%5D=%2Fhomes&place_id=ChIJ31sDFmbZj4YR-Gi8_br1qbQ&acp_id=2584c4a4-98bc-4643-8d77-70527cd62042&date_picker_type=calendar&checkin=2026-07-03&checkout=2026-07-05&adults=2&search_type=user_map_move&query=Museo%20Arocena%2C%20Torre%C3%B3n%2C%20Coah.&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2026-07-01&monthly_length=3&monthly_end_date=2026-10-01&search_mode=regular_search&price_filter_input_type=2&price_filter_num_nights=2&channel=EXPLORE&ne_lat=25.545894825474715&ne_lng=-103.44420876329337&sw_lat=25.533599552835383&sw_lng=-103.4629861745729&zoom=15.515811410146176&zoom_level=15.515811410146176&search_by_map=true"
                   className="block text-[#D0A5F9] hover:underline"
@@ -101,7 +101,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <p className="mt-4 font-preahvihear text-base leading-6 text-white">
+          <p className="mt-4 font-preahvihear text-base leading-[1.944rem] text-white">
             Si necesitas ayuda, estamos a un mensaje de distancia.
           </p>
         </div>
@@ -111,10 +111,10 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 z-[15] h-[400px] w-[1440px] bg-amber-50" />
 
         <Image
-          className="absolute left-1/2 top-[5970px] z-20 h-[237px] w-[542px] -translate-x-1/2"
+          className="absolute left-1/2 top-[5970px] z-20 h-[307px] w-[702px] -translate-x-1/2"
           src="/letras.svg"
-          width={542}
-          height={237}
+          width={702}
+          height={307}
           alt="Come for the party, stay for the love."
         />
 
@@ -136,24 +136,23 @@ export default function Home() {
           height={1403}
           alt="envelope"
         />
-        <div className="w-[475.24px] h-40 left-[469px] top-[697.59px] absolute origin-top-left rotate-[-8.42deg] text-center justify-start text-black text-base font-normal font-poppins leading-6">
+        <div className="w-[475.24px] h-40 left-[469px] top-[697.59px] absolute origin-top-left rotate-[-8.42deg] text-center justify-start text-black text-base font-normal font-poppins leading-[1.944rem]">
           Más que una boda, es una reunion íntima y muy especial para celebrar
           el amor, la amistad y todas las historias que nos trajeron hasta aquí.
-          <br />
           <br />
           Queremos que estés presente, risas, buena música y mucha complicidad
           (;
         </div>
-        <div className="w-[1005px] h-20 left-[182px] top-[644.16px] absolute origin-top-left rotate-[-8.42deg] text-center justify-start text-black text-5xl font-semibold font-bricolage leading-[76.80px]">
+        <div className="w-[1005px] h-20 left-[182px] top-[644.16px] absolute origin-top-left rotate-[-8.42deg] text-center justify-start text-black text-5xl font-semibold font-bricolage leading-[99.53px]">
           The secret party
         </div>
-        <div className="w-[778px] h-7 left-[331px] top-[2158px] absolute text-center justify-start text-white text-base font-normal font-preahvihear leading-6">
+        <div className="w-[778px] h-7 left-[331px] top-[2158px] absolute text-center justify-start text-white text-base font-normal font-preahvihear leading-[1.944rem]">
           Museo Arocena, av. Juarez 1249, Centro Histórico, 27000 Torreón, Coah.
         </div>
         <div className="left-[685px] top-[2767px] absolute text-center justify-start text-black text-4xl font-normal font-preahvihear">
           When?
         </div>
-        <div className="left-[525px] top-[2060px] absolute text-center justify-start text-amber-50 text-5xl font-bold font-bricolage leading-[76.80px]">
+        <div className="left-[525px] top-[2060px] absolute text-center justify-start text-amber-50 text-5xl font-bold font-bricolage leading-[99.53px]">
           Un rincón bonito
         </div>
         <Image
@@ -171,10 +170,10 @@ export default function Home() {
           height={283}
           alt="museum3"
         />
-        <div className="w-80 h-20 left-[557px] top-[1469px] absolute text-center justify-start text-amber-50 text-5xl font-bold font-bricolage leading-[76.80px]">
+        <div className="w-120 h-20 left-[457px] top-[1469px] absolute text-center justify-start text-amber-50 text-5xl font-bold font-bricolage leading-[99.53px]">
           Aparta el día
         </div>
-        <div className="left-[602px] top-[1815px] absolute text-center justify-start text-amber-50 text-4xl font-normal font-preahvihear leading-[54.40px]">
+        <div className="left-[602px] top-[1815px] absolute text-center justify-start text-amber-50 text-4xl font-normal font-preahvihear leading-[70.51px]">
           Hora 8:00 pm
         </div>
         <div className="w-[543px] h-149 left-[448px] top-[1649px] absolute">
@@ -186,10 +185,10 @@ export default function Home() {
             alt="calendar"
           />
         </div>
-        <div className="w-52 h-14 left-[614px] top-[1578px] absolute text-center justify-start text-amber-50 text-4xl font-normal font-preahvihear leading-[54.40px]">
+        <div className="w-52 h-14 left-[614px] top-[1578px] absolute text-center justify-start text-amber-50 text-4xl font-normal font-preahvihear leading-[70.51px]">
           Octubre
         </div>
-        <div className="left-[592px] top-[3191px] absolute text-center justify-start text-emerald-950 text-5xl font-bold font-bricolage leading-[76.80px]">
+        <div className="left-[592px] top-[3191px] absolute text-center justify-start text-emerald-950 text-5xl font-bold font-bricolage leading-[99.53px]">
           Ceremonia
         </div>
         <div className="left-1/2 top-[3510px] absolute z-10 w-[1000px] -translate-x-1/2 drop-shadow-[0_16px_40px_rgba(10,51,35,0.15)]">
@@ -249,7 +248,7 @@ export default function Home() {
           height={56}
           alt="star4"
         />
-        <div className="w-[927px] h-20 left-[256px] top-[3280px] absolute text-center justify-start text-black text-base font-normal font-preahvihear leading-6">
+        <div className="w-[927px] h-20 left-[256px] top-[3280px] absolute text-center justify-start text-black text-base font-normal font-preahvihear leading-[1.944rem]">
           La celebración comienza en la terraza del museo, donde nos reuniremos
           para romper el hielo, ponernos al día y disfrutar de una copa antes
           del momento oficial.

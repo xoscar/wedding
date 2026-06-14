@@ -2,7 +2,6 @@
 
 html {
   scroll-behavior: smooth;
-  overscroll-behavior: none;
 }
 
 body {
@@ -24,6 +23,12 @@ body {
   width: 100%;
   overflow-x: hidden;
   background-color: #fffbeb;
+}
+
+.wedding-container {
+  --text-base: 1.296rem;
+  --text-4xl: 2.916rem;
+  --text-5xl: 3.888rem;
 }
 
 @media (max-width: 1440px) {
