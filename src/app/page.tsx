@@ -55,7 +55,7 @@ export default function Home() {
           stay for{" "}
         </div>
         <Image
-          className="w-[1080px] h-[1080px] left-[111px] top-[5803px] absolute"
+          className="w-[1080px] h-[1080px] left-[154px] top-[5803px] absolute"
           src="/novios.gif"
           width={1080}
           height={1080}
@@ -198,9 +198,8 @@ export default function Home() {
           height={56}
           alt="star4"
         />
-        <div className="w-[927px] h-20 left-[256px] top-[3316px] absolute text-center justify-start text-black text-base font-normal font-preahvihear leading-6">
-          wkabhksbdhjksacvjdcgjsfvfdgsvfgdsfvdsghvhakgvfchgsvcjgv
-          ghsdvcgvhgdsvgvcfgdvghdvscgvgdvghvgvgvgvghkvvhgvadsghvfgfv.
+        <div className="w-[927px] h-20 left-[256px] top-[3280px] absolute text-center justify-start text-black text-base font-normal font-preahvihear leading-6">
+          Rompe hielos y ceremonia civil en la terraza del museo, hora 6:30 pm. 
         </div>
       </div>
     </div>
